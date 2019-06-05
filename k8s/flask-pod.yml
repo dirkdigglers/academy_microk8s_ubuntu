@@ -1,0 +1,19 @@
+## flask-pod.yml
+## Input File for K8S to create Docker Container 
+---
+apiVersion: v1
+kind: Pod
+metadata:
+    name: flask-pod
+    namespace: default
+spec:
+    containers:
+    -   name: flask-pod
+        image: localhost:32000/simple-docker 
+#        command:
+#            - sleep
+#            - "3600"
+        imagePullPolicy: IfNotPresent
+        ports:
+        -   containerPort: 5000
+    restartPolicy: Always
