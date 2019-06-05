@@ -1,12 +1,11 @@
 sudo apt update
 sudo apt install snapd
 sudo apt install ssh
-sudo apt install docker.io
 sudo snap install microk8s --classic
-sleep 10
+sleep 30
 
 microk8s.enable dashboard dns registry metrics-server ingress storage
-sleep 10
+sleep 30
 
 alias kubectl=microk8s.kubectl
 alias docker=microk8s.docker
