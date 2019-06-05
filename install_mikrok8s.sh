@@ -1,11 +1,12 @@
 sudo apt update
 sudo apt install snapd
 sudo apt install ssh
+sudo apt install docker.io
 sudo snap install microk8s --classic
-sleep 30
+sleep 10
 
 microk8s.enable dashboard dns registry metrics-server ingress storage
-sleep 30
+sleep 10
 
 alias kubectl=microk8s.kubectl
 alias docker=microk8s.docker
@@ -20,7 +21,7 @@ sudo bash -c "sed -i 's/AllowTcpForwarding.*no/AllowTcpForwarding yes/g' /etc/ss
 sudo bash -c "sed -i 's/GatewayPorts.*no/GatewayPorts yes/g' /etc/ssh/sshd_config"
 sudo service sshd restart
 
-cat >> .bashrc <<- EOF
+cat >> ~/.bashrc <<- EOF
 # Microk8s aliases
 alias kubectl=microk8s.kubectl
 alias docker=microk8s.docker
