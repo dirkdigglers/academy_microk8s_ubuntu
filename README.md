@@ -1,16 +1,16 @@
 # academy_microk8s
-<h1>Installation Script for microk8s</h1>
+<h1>Installation Script for microk8s on Ubuntu 18</h1>
 <P>
 In short, microk8s is designed to be a fast and lightweight upstream Kubernetes 
 install isolated from your host but not via a virtual machine. This isolation is
 achieved by packaging all the upstream binaries for Kubernetes, Docker.io, 
-iptables, and CNI in a single snap package. The snap package is an application 
-container?—?you can imagine this as a lighter weight version of a Docker 
+iptables, and CNI in a singleï¿½snap package. The snap package is an application 
+container?ï¿½?you can imagine this as a lighter weight version of a Docker 
 container. It uses a lot of the same underlying technologies for isolation just 
 without all the overhead of network isolation.
 <P>
-<h2>Installing SNAP on Centos</h2><br>
-   https://computingforgeeks.com/install-snapd-snap-applications-centos-7/
+<h2>Installing SNAP on Ubuntu</h2><br>
+https://codeburst.io/how-to-install-and-use-snap-on-ubuntu-18-04-9fcb6e3b34f9
 <P>
 <h2>Installing Kubernetes (microk8s)</h2><br>
    https://microk8s.io/<br>
